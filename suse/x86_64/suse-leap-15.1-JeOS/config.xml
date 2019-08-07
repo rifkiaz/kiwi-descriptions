@@ -2,8 +2,8 @@
 
 <image schemaversion="6.8" name="LimeJeOS-Leap-15.1">
     <description type="system">
-        <author>Marcus Schaefer</author>
-        <contact>ms@suse.de</contact>
+        <author>Rifki Affandi</author>
+        <contact>rifkiaz@opensuse.org</contact>
         <specification>
             Leap 15.1 JeOS, is a small text based image
         </specification>
@@ -14,7 +14,7 @@
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
         <keytable>us</keytable>
-        <timezone>Europe/Berlin</timezone>
+        <timezone>Asia/Jakarta</timezone>
         <rpm-excludedocs>true</rpm-excludedocs>
         <rpm-check-signatures>false</rpm-check-signatures>
         <bootsplash-theme>openSUSE</bootsplash-theme>
@@ -36,7 +36,8 @@
         </type>
     </preferences>
     <users>
-        <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
+	<user password="1521" home="/home/mraz" name="mraz" groups="users" pwdformat="plain"/>
+        <user password="152103" home="/root" name="root" groups="root" pwdformat="plain"/>
     </users>
     <repository type="rpm-md" alias="kiwi" priority="1">
         <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.1"/>
@@ -71,7 +72,11 @@
         <package name="which"/>
         <package name="shim"/>
         <package name="kernel-default"/>
-        <package name="timezone"/>
+	    <package name="timezone"/>
+        <package name="unzip"/>
+        <package name="htop"/>
+        <package name="apache2"/>
+        <package name="sudo"/>
     </packages>
     <packages type="iso">
         <package name="gfxboot-branding-openSUSE"/>
