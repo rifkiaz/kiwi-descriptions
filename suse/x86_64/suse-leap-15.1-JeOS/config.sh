@@ -45,7 +45,13 @@ if [[ ${kiwi_type} =~ oem|vmx ]];then
 else
     suseRemoveService grub_config
 fi
-
+#======================================
+# Setup login with gdm
+#--------------------------------------
+baseUpdateSysConfig /etc/sysconfig/windowmanager DEFAULT_WM gnome
+baseUpdateSysConfig /etc/sysconfig/displaymanager DISPLAYMANAGER gdm
+baseSetRunlevel 5
+suseConfig
 #======================================
 # Setup default target, multi-user
 #--------------------------------------

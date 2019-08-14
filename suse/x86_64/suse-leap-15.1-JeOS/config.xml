@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.8" name="LimeJeOS-Leap-15.1">
+<image schemaversion="6.8" name="GNOME-LimeJeOS-Leap-15.1">
     <description type="system">
         <author>Rifki Affandi</author>
         <contact>rifkiaz@opensuse.org</contact>
@@ -10,7 +10,7 @@
     </description>
     <preferences>
         <type image="iso" primary="true" flags="overlay" hybrid="true" firmware="efi" kernelcmdline="splash" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="true"/>
-        <version>1.15.1</version>
+        <version>15.1</version>
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
         <keytable>us</keytable>
@@ -24,12 +24,12 @@
         <type image="vmx" filesystem="ext4" bootloader="grub2" kernelcmdline="splash" firmware="efi"/>
         <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" bootloader="grub2" kernelcmdline="splash" firmware="efi">
             <oemconfig>
-                <oem-systemsize>2048</oem-systemsize>
+                <oem-systemsize>4048</oem-systemsize>
                 <oem-swap>true</oem-swap>
                 <oem-device-filter>/dev/ram</oem-device-filter>
                 <oem-multipath-scan>false</oem-multipath-scan>
             </oemconfig>
-            <machine memory="512" guestOS="suse" HWversion="4">
+            <machine memory="1000" guestOS="suse" HWversion="4">
                 <vmdisk id="0" controller="ide"/>
                 <vmnic driver="e1000" interface="0" mode="bridged"/>
             </machine>
@@ -77,6 +77,11 @@
         <package name="htop"/>
         <package name="apache2"/>
         <package name="sudo"/>
+        <package name="lsb-release"/>
+        <package name="xorg-x11-server"/>
+        <package name="gdm"/>
+        <package name="python"/>
+        <package name="perl"/>
     </packages>
     <packages type="iso">
         <package name="gfxboot-branding-openSUSE"/>
