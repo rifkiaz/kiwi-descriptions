@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.8" name="GNOME-LimeJeOS-Leap-15.1">
+<image schemaversion="6.8" name="openSUSE-LimeJeOS-Leap-15.1">
     <description type="system">
         <author>Rifki Affandi</author>
         <contact>rifkiaz@opensuse.org</contact>
@@ -45,6 +45,18 @@
     <repository type="rpm-md" alias="Leap_15_1" imageinclude="true">
         <source path="obs://openSUSE:Leap:15.1/standard"/>
     </repository>
+    <repository type="rpm-md" alias="repo-opensuse-id-oss" imageinclude="true" priority="1">
+        <source path="http://repo.opensuse.id/distribution/leap/15.1/repo/oss/"/>
+    </repository>
+    <repository type="rpm-md" alias="repo-opensuse-id-non-oss" imageinclude="true" priority="1">
+        <source path="http://repo.opensuse.id/distribution/leap/15.1/repo/non-oss/"/>
+    </repository>
+    <repository type="rpm-md" alias="repo-opensuse-id-update-oss" imageinclude="true" priority="1">
+        <source path="http://repo.opensuse.id/update/leap/15.1/oss/"/>
+    </repository>
+    <repository type="rpm-md" alias="repo-opensuse-id-oss" imageinclude="true" priority="1">
+        <source path="http://repo.opensuse.id/update/leap/15.1/non-oss/"/>
+    </repository>
     <packages type="image">
         <package name="checkmedia"/>
         <package name="patterns-openSUSE-base"/>
@@ -82,6 +94,8 @@
         <package name="gdm"/>
         <package name="python"/>
         <package name="perl"/>
+        <package name="autoyast2"/>
+        <package name="yast2"/>
     </packages>
     <packages type="iso">
         <package name="gfxboot-branding-openSUSE"/>
@@ -99,5 +113,6 @@
         <package name="cracklib-dict-full"/>
         <package name="ca-certificates"/>
         <package name="openSUSE-release"/>
+        <package name="ca-certificates-mozilla"/>
     </packages>
 </image>
